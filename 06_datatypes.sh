@@ -5,7 +5,7 @@ number=200
 
 time=$(date)
 
-echo "excuted at $time
+echo "excuted at $time"
 
 sum=$($number1+$number2)
 

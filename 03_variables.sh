@@ -1,7 +1,7 @@
 #!/bin/bash
 
-person1 = modi
-person2 = musk
+person1=modi
+person2=musk
 
 echo "$person1:: Hey $person2, How are you?"
 echo "$person2:: Hello $person1, I am fine. How are you doing"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 number1=100
-number=200
+number2=200
 
 time=$(date)
 

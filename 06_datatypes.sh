@@ -7,6 +7,6 @@ time=$(date)
 
 echo "excuted at $time"
 
-sum=$($number1+$number2)
+sum=$(($number1+$number2))
 
 echo "sum of numbers is $sum"

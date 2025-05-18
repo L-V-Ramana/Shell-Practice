@@ -13,7 +13,7 @@ validate(){
     
     if [ $1 -eq 0 ]
     then 
-        echo " $2 is installing is success"
+        echo " $2 is installing....success"
     else 
         echo " $2 is installing failed"
     fi
@@ -30,7 +30,7 @@ else
     echo "already installed "mysql""
 fi 
 
-dnf installed list nginx
+dnf list installed nginx
 
 if [ $? -ne 0 ]
 then 

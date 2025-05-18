@@ -29,3 +29,14 @@ then
 else 
     echo "already installed "mysql""
 fi 
+
+dnf installed list nginx
+
+if [ $? -ne 0 ]
+then 
+ echo "installing nginx"
+ dnf install nginx -y 
+ validate $? "nginx"
+else
+ echo "nginx already installed"
+fi

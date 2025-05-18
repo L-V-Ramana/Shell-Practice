@@ -10,7 +10,8 @@ else
      echo " script is running by root user"
 fi
 
-dnf installed list mysql
+dnf list installed mysql
+
 if [ $? -ne 0 ]
 then
     echo "dnf mysql is not yet installed, installing now"

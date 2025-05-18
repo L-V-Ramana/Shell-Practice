@@ -16,4 +16,5 @@ validate(){
         echo " $2 is installing"
     else 
         echo " $2 is not installing"
+    fi
 }

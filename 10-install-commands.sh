@@ -2,9 +2,9 @@
 
 userid=$(id -u)
 
-if [ $userid -eq 0 ]
+if [ $userid -nq 0 ]
 then 
-    echo " script is running by root user"
+      echo "error: access denied, please run the script with root access "
 else
-    echo "error: access denied, please run the script with root access "
+     echo " script is running by root user"
 fi

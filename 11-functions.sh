@@ -49,3 +49,4 @@ then
     validate $? python3
 else
     echo "already installed"
+fi

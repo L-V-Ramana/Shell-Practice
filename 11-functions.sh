@@ -18,3 +18,14 @@ validate(){
         echo " $2 is not installing"
     fi
 }
+
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then 
+    echo "installing mysql"
+    dfn install mysql -y
+    validate() $? "mysql"
+else 
+    echo "already installed "mysql""
+fi 

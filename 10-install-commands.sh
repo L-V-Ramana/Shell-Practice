@@ -2,7 +2,7 @@
 
 userid=$(id -u)
 
-if [ $userid -nq 0 ]
+if [ $userid -ne 0 ]
 then 
       echo "error: access denied, please run the script with root access "
 else

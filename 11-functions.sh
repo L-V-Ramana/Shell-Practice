@@ -13,9 +13,9 @@ validate(){
     
     if [ $1 eq 0 ]
     then 
-        echo " $2 is installing"
+        echo " $2 is installing is success"
     else 
-        echo " $2 is not installing"
+        echo " $2 is installing failed"
     fi
 }
 
@@ -25,7 +25,7 @@ if [ $? -ne 0 ]
 then 
     echo "installing mysql"
     dfn install mysql -y
-    validate() $? "mysql"
+    validate $? "mysql"
 else 
     echo "already installed "mysql""
 fi 

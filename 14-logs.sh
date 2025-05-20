@@ -26,7 +26,6 @@ validate(){
     if [ $1 -eq 0 ]
     then 
         echo -e " $2 is installing.... $g success $n"  &>>$logfile
-    exit 1
     else 
         echo -e " $2 is installing...$r failed $n" &>>$logfile
     fi

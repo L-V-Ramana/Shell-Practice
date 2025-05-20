@@ -7,7 +7,7 @@ y="\e[33m"
 b="\e[34m"
 n="\e[0m]"
 
-logsfolder= "var/log/shellscript-logs"
+logsfolder="var/log/shellscript-logs"
 filename=$(echo $0|cut -d "." -f1)
 logfile=$logsfolder/$filename
  mkdir -p $logsfolder

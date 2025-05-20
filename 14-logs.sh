@@ -18,7 +18,7 @@ then
     exit 1
 else
     echo " you are running with root access"  &>>$logfile
-    exit 1
+    
 fi
 
 validate(){
@@ -28,18 +28,18 @@ validate(){
         echo -e " $2 is installing.... $g success $n"  &>>$logfile
     exit 1
     else 
-        echo -e " $2 is installing...$r failed $n"  &>>$logfile
+        echo -e " $2 is installing...$r failed $n" &>>$logfile
     exit 1
     fi
 }
 
-dnf list installed mysql   &>>$logfile
+dnf list installed mysql &>>$logfile
     exit 1
 
 if [ $? -ne 0 ]
 then 
     echo "installing mysql" 
-    dfn install mysql -y  &>>$logfile
+    dfn install mysql -y &>>$logfile
     exit 1
     validate $? "mysql"
 else 

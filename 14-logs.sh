@@ -29,18 +29,16 @@ validate(){
     exit 1
     else 
         echo -e " $2 is installing...$r failed $n" &>>$logfile
-    exit 1
     fi
 }
 
 dnf list installed mysql &>>$logfile
-    exit 1
+    
 
 if [ $? -ne 0 ]
 then 
     echo "installing mysql" 
     dfn install mysql -y &>>$logfile
-    exit 1
     validate $? "mysql"
 else 
     echo -e " already installed $y mysql $n"  &>>$logfile
@@ -48,13 +46,12 @@ else
 fi 
 
 dnf list installed nginx  &>>$logfile
-    exit 1
+  
 
 if [ $? -ne 0 ]
 then 
     echo "installing nginx"
     dnf install nginx -y   &>>$logfile
-    exit 1
     validate $? "nginx"
 else
     echo -e " nginx already $y installed $n "  &>>$logfile
@@ -66,7 +63,6 @@ if [ $? -ne 0 ]
 then 
     echo "insatlling python3"
     dnf install python3 -y   &>>$logfile
-    exit 1
     validate $? python3
 else
     echo -e " already installed...$y python3 $n "  &>>$logfile

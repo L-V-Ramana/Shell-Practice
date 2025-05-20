@@ -9,7 +9,7 @@ n="\e[0m]"
 
 if [ $userid -ne 0 ]
 then 
-    echo -e "$rerror :$n login with sudo user"
+    echo -e "$r error : $n login with sudo user"
     exit 1
 else
     echo " you are running with root access"
@@ -19,9 +19,9 @@ validate(){
     
     if [ $1 -eq 0 ]
     then 
-        echo -e " $2 is installing.... $gsuccess$n"
+        echo -e " $2 is installing.... $g success $n"
     else 
-        echo -e " $2 is installing...$rfailed$n"
+        echo -e " $2 is installing...$r failed $n"
     fi
 }
 
@@ -47,7 +47,7 @@ else
     echo -e " nginx already $y installed $n "
 fi
 
-dnf list installed pytho3
+dnf list installed python3
 if [ $? -ne 0 ]
 then 
     echo "insatlling python3"

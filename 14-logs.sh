@@ -14,10 +14,10 @@ logfile=$logsfolder/$filename
 
 if [ $userid -ne 0 ]
 then 
-    echo -e "$r error : $n login with sudo user" &>>$logfile
+    echo -e "$r error : $n login with sudo user" | tee -a $logfile
     exit 1
 else
-    echo " you are running with root access"  &>>$logfile
+    echo " you are running with root access" | tee -a $logfile
     
 fi
 
@@ -40,7 +40,7 @@ then
     dfn install mysql -y &>>$logfile
     validate $? "mysql"
 else 
-    echo -e " already installed $y mysql $n"  &>>$logfile
+    echo -e " already installed $y mysql $n" | tee -a $logfile
     exit 1
 fi 
 
@@ -53,7 +53,7 @@ then
     dnf install nginx -y   &>>$logfile
     validate $? "nginx"
 else
-    echo -e " nginx already $y installed $n "  &>>$logfile
+    echo -e " nginx already $y installed $n " | tee -a $logfile
     exit 1
 fi
 
@@ -64,6 +64,6 @@ then
     dnf install python3 -y   &>>$logfile
     validate $? python3
 else
-    echo -e " already installed...$y python3 $n "  &>>$logfile
+    echo -e " already installed...$y python3 $n " |tee  -a $logfile
     exit 1
 fi

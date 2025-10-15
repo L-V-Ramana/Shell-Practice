@@ -33,5 +33,5 @@ echo "1st subject ${subjects[0]}"
 echo "2nd subject ${subjects[1]}"
 echo "3rd subject ${subjects[2]}"
 
-echo "all subjects $subjects[@qq]"
+echo "all subjects $subjects[@]"
 

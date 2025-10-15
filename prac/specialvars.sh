@@ -4,6 +4,7 @@ echo "special vars in shell"
 
 echo "to get the current working directory $PWD"
 echo "to know the current running user $USER"
+echo "to know the current running home dir $HOME"
 echo "to know the status of previous commnad status $?"
 echo "if $? values is return as 1 it is success remaining are failures"
 echo "$# to get the count of number of args passed"

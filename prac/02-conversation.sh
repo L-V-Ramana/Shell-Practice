@@ -35,3 +35,9 @@ echo "3rd subject ${subjects[2]}"
 
 echo "all subjects $subjects[@]"
 
+number=10
+if [ ${number} -lt 10 ]
+then
+    echo "$number is less than 10"
+fi
+

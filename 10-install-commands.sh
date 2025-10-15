@@ -19,10 +19,10 @@ then
 
     if [ $? -eq 0 ]
     then  
-    echo "mysql installed successfully"
+        echo "mysql installed successfully"
     else
-    echo "mysql installtion falied "
-    exit 1
+     echo "mysql installtion falied "
+        exit 1
     fi
 
 else

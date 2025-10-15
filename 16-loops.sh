@@ -23,23 +23,35 @@ fi
 validate(){
     if [ $1 -eq 0 ]
     then 
-     echo "$2 installed $g successfully $n"
+     echo "$2 installed $g successfully $n"| tee -a $logfile
     else 
-        echo "$2 installation $r falied $n"
+        echo "$2 installation $r falied $n"| tee -a $logfile
     fi
 }
 
 for app in ${apps[@]} 
 do 
-    dnf list installed $app
+    dnf list installed $app &>>$logfile
     if [  $? -ne 0 ]
     then 
         echo "installing $app" 
         dnf install $app -y &>> $logfile
-fi
         validate $? $app
     else 
-        echo "$app already installed"
+        echo "$app already installed"| tee -a $logfile
+    fi    
+done
+
+for app in $@ # to get all the required packages from aruguments without giving in code
+do 
+    dnf list installed $app &>>$logfile
+    if [  $? -ne 0 ]
+    then 
+        echo "installing $app" 
+        dnf install $app -y &>> $logfile
+        validate $? $app
+    else 
+        echo "$app already installed"| tee -a $logfile
     fi    
 done
 

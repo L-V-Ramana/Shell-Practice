@@ -4,11 +4,6 @@ g="\e[32m"
 y="\e[33m"
 n="\e[0m"
 
-log_directory=/var/log/shell-script
-scriptName=$0|cut -d "." -f1
-logfile=${log_directory}/$scriptName
-
-
 user=$(id -u)
 packages=("mysql" "nginx")
 if [ $user -ne 0 ]
@@ -19,7 +14,15 @@ else
     echo -e "$g you are logged as root user $n"| tee -a $logfile
 fi
 
-mkdir -p $log_directory     
+log_directory=/var/log/shell-script
+mkdir -p $log_directory
+scriptName=$0|cut -d "." -f1
+logfile="${log_directory}/$scriptName.log"
+
+
+
+
+     
 
 for i in ${packages[@]}
 do

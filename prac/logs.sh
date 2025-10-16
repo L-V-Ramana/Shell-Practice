@@ -20,7 +20,15 @@ scriptName=$0|cut -d "." -f1
 logfile="${log_directory}/$scriptName.log"
 
 
-
+validate(){
+    if [ $1 -eq 0 ]
+    then    
+        echo -e "$g $2 installaiton is success $n"|tee -a $logfile
+    else
+        echo -e "$r $2 installation is failed $n"| tee -a $logfile
+        exit 1
+    fi 
+}
 
      
 
@@ -54,13 +62,5 @@ done
 #     validate $? "nginx"
 # fi
 
-validate(){
-    if [ $1 -eq 0 ]
-    then    
-        echo -e "$g $2 installaiton is success $n"|tee -a $logfile
-    else
-        echo -e "$r $2 installation is failed $n"| tee -a $logfile
-        exit 1
-    fi 
-}
+
 

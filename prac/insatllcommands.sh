@@ -38,5 +38,10 @@ validate(){
 }
 
 #colours
-echo -e "\e[31m ramana lella is a good boy \e[0m"
+R="\e[31m"
+G=\e[32m
+Y=\e[33m
+N=\e[0m
 
+echo -e "\e[32m ramana lella is a good boy \e[0m"
+echo -e "\e31m[ramana is a bad boy \e32m[]"

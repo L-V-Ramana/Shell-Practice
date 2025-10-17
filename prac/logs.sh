@@ -41,7 +41,7 @@ do
         exit 1
     else
         echo -e "$g installing $i $n"| tee -a $logfile
-        dnf install $i -y&>>logfile
+        dnf install $i -y &>>$logfile
         validate $? $i
     fi
 done

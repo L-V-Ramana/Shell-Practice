@@ -35,14 +35,15 @@ validate(){
 for i in ${packages[@]}
 do
     dnf list installed $i &>> $logfile
-    if [ $? -eq 0 ]
+    if [ $? -ne 0 ]
     then 
-        echo -e "$y $i already installed$n"|tee -a $logfile
-        exit 1
-    else
-        echo -e "$g installing $i $n"| tee -a $logfile
+    echo -e "$g installing $i $n"| tee -a $logfile
         dnf install $i -y &>>$logfile
         validate $? $i
+        
+    else
+        echo -e "$y $i already installed$n"|tee -a $logfile
+        exit 1
     fi
 done
 

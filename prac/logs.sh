@@ -40,10 +40,8 @@ do
     echo -e "$g installing $i $n"| tee -a $logfile
         dnf install $i -y &>>$logfile
         validate $? $i
-        
     else
         echo -e "$y $i already installed$n"|tee -a $logfile
-        exit 1
     fi
 done
 

@@ -18,7 +18,7 @@ log_directory=/var/log/shell-script
 mkdir -p $log_directory
 scriptName=$(echo $0 | cut -d "." -f1)
 echo $scriptName
-logfile="${log_directory}/${scriptName}.log"
+logfile=${log_directory}/${scriptName}.log
 
 
 validate(){

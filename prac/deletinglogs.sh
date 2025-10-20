@@ -10,10 +10,10 @@ sourceDir=home/ec2-user/app-logs
 
 if [$user -ne 0]
 then 
-    echo -e "$R Error $N login as root user"
+    echo -e " $R Error $N login as root user"
     exit 1
 else
-    echo "$G Success $N, root user"
+    echo -e "$G Success $N, root user"
 fi
 
 files=$(find $sourceDir -name "*.logs" -mtime+14)

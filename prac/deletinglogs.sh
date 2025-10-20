@@ -16,7 +16,7 @@ else
     echo -e "$G Success $N, root user"
 fi
 
-files=$(find $sourceDir -name "*.logs" -mtime+14)
+files=$(find $sourceDir -name "*.logs" -mtime +14)
 
 
 while  ISF=read -r files 

@@ -4,7 +4,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 user=$(id -u)
-sourceDir=home/ec2-user/app-logs
+sourceDir=/home/ec2-user/app-logs
 
 
 

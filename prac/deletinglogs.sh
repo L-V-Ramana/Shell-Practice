@@ -14,7 +14,7 @@ then
     exit 1
 else
     echo "$G Success $N, root user"
-
+fi
 
 files=$(find $sourceDir -name "*.logs" -mtime+14)
 

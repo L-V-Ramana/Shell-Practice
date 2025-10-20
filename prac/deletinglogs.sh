@@ -19,7 +19,7 @@ fi
 files=$(find $sourceDir -name "*.logs" -mtime +14)
 
 
-while  ISF=read -r files 
+while  ISF= read -r files 
 do
     echo "deleting files as $files"
     rm -rf $files

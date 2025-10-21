@@ -32,12 +32,12 @@ if [ ! -z $files ]
 then 
     timestamp=$(date+f-%h-%m-%s)
     filename="$DEST_DIR/$timestamp.zip"
-    $(find $SOURCE_DIR -name "*.log" -mtime +$DATE)|zip @ $filename
+    find $SOURCE_DIR -name "*.log" -mtime +$DATE|zip @ $filename
 
     if [ -f $filename ]
     then 
         echo -e "Succesfully files zipped"
-
+        
         while ISF= read -r files
         do
             echo -e "$G $file is being removed $N"

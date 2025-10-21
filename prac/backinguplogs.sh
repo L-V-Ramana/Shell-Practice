@@ -46,6 +46,7 @@ then
     else
         echo -e "cration of zip is failed"
     fi
+fi
 
 
 

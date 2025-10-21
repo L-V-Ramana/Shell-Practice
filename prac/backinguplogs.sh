@@ -30,6 +30,7 @@ files=$(find $SOURCE_DIR -name "*.log" -mtime +$DATE)
 echo "finding files"
 if [ ! -z $files ]
 then 
+    echo "files found"
     timestamp=$(date +%s)
     echo $timestamp
     filename="$DEST_DIR/$timestamp.zip"
@@ -48,6 +49,8 @@ then
     else
         echo -e "cration of zip is failed"
     fi
+else
+    echo "files not found"
 fi
 
 

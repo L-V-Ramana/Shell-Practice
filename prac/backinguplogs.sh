@@ -26,7 +26,7 @@ then
     fi
 fi
 
-files=$(find $SOURCE_DIR -name "*.log" -mtime +$DATE)
+files=$("find $SOURCE_DIR -name "*.log" -mtime +$DATE")
 
 if [ ! -z $files ]
 then 

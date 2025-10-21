@@ -30,7 +30,7 @@ files=$(find $SOURCE_DIR -name "*.log" -mtime +$DATE)
 echo "finding files"
 if [ ! -z $files ]
 then 
-    timestamp=$(date+f-%h-%m-%s)
+    timestamp=$(date +%F-%H-%M-%S)
     echo $timestamp
     filename="$DEST_DIR/$timestamp.zip"
     echo $filename

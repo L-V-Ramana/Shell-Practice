@@ -42,7 +42,7 @@ then
         do
             echo -e "$G $file is being removed $N"
             rm -rf $file
-        done >>>$files
+        done >>> $files
     else
         echo -e "cration of zip is failed"
     fi

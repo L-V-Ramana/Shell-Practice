@@ -38,10 +38,10 @@ then
     then 
         echo -e "Succesfully files zipped"
 
-        while ISF = read -r file
+        while ISF= read -r files
         do
             echo -e "$G $file is being removed $N"
-            rm -rf $file
+            rm -rf $files
         done >>> $files
     else
         echo -e "cration of zip is failed"

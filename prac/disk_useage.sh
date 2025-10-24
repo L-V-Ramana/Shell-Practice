@@ -11,6 +11,6 @@ do
     partions=$(echo $line|awk  '{print $7F}')
     if [ $useage -gt 1 ]
     then 
-        echo "$partions disk useahge is greater than threshold $useage of system $ip"
+        echo -e "\e[33m $partions\e[0m disk useahge is greater than threshold \e[31m $useage \e[0m of system $ip"
     fi
 done <<< $disk

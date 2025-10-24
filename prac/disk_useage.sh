@@ -5,11 +5,11 @@ ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4) #too get the priva
                                                                 #the server
 
 
-while IFS= read -r line
+while IFS= read line
 do 
-   useage= $line|awk -f " " '{PRINT $6F}'|cut -d "%" f1
-    partions= $line|awk -f " " '{PRINT $7F}'
-    if [ $useage -gt 70 ]
+    useage=$(echo $line| awk  '{print $6F}' | cut -d "%" -f1) 
+    partions=$(echo $line|awk  '{print $7F}')
+    if [ $useage -ge 70 ]
     then 
         echo "$partions disk useahge is greater than threshold $useage of system $ip"
     fi

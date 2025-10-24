@@ -35,7 +35,8 @@ then
     echo $timestamp
     filename="$DEST_DIR/$timestamp.zip"
     echo $filename
-    find $SOURCE_DIR -name "*.log" -mtime +$DATE| zip -@ $filename
+   
+      find $SOURCE_DIR -name "*.log" -mtime +$DATE| zip -@ $filename
 
     if [ -f $filename ]
     then 

@@ -12,4 +12,5 @@ do
     if [ $useage -gt 70 ]
     then 
         echo $partions disk useahge is greater than threshold $useage of system $ip
+    fi
 done <<< $disk

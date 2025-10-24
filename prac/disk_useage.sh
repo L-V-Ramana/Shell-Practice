@@ -9,7 +9,7 @@ while IFS= read line
 do 
     useage=$(echo $line| awk  '{print $6F}' | cut -d "%" -f1) 
     partions=$(echo $line|awk  '{print $7F}')
-    if [ $useage -ge 70 ]
+    if [ $useage -gt 1 ]
     then 
         echo "$partions disk useahge is greater than threshold $useage of system $ip"
     fi

@@ -7,7 +7,7 @@ ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4) #too get the priva
 
 while IFS= read -r line
 do 
-   useage= $line|awk -f " " '{PRINT $6F}'|cut -d '%' f1
+   useage= $line|awk -f " " '{PRINT $6F}'|cut -d "%" f1
     partions= $line|awk -f " " '{PRINT $7F}'
     if [ $useage -gt 70 ]
     then 

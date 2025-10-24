@@ -1,6 +1,6 @@
 #!/bin/bash
 
-disk=$(df -hT | grep -v Filesystem)
+disk= $(df -hT | grep -v Filesystem)
 ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4) #too get the private ip of 
                                                                 #the server
 
